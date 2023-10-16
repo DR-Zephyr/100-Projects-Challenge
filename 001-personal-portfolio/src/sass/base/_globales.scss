@@ -1,0 +1,40 @@
+@use './variables' as v;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: v.$body-font;
+    font-size: v.$normal-font-size;
+    background-color: v.$body-color;
+    color: v.$text-color;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: v.$title-color;
+    font-weight: v.$font-bold;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
