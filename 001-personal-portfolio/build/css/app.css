@@ -23,6 +23,7 @@ body {
   font-size: 0.938rem;
   background-color: hsl(0, 0%, 87%);
   color: hsl(0, 0%, 35%);
+  height: 200vh;
 }
 
 h1,
@@ -123,6 +124,10 @@ img {
   background-color: hsl(0, 0%, 87%);
   z-index: 100;
   transition: box-shadow 0.4s;
+}
+
+.shadow-header {
+  box-shadow: 0 1px 16px hsla(0, 0%, 0%, 0.219);
 }
 
 .nav {

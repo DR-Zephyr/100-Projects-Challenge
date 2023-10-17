@@ -10,6 +10,10 @@
     transition: box-shadow 0.4s;
 }
 
+.shadow-header{
+    box-shadow: 0 1px 16px hsla(0, 0%, 0%, .12)
+}
+
 .nav {
     position: relative;
     height: v.$header-height;
