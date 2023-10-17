@@ -1,5 +1,5 @@
 @use '../base/variables' as v;
-
+/*================ Header, Nav Styles ====================*/
 .header {
     position: fixed;
     width: 100%;
@@ -54,25 +54,27 @@
         background-color: hsla(0, 0%, 0%, 0.75);
         width: 100%;
         text-align: center;
-        backdrop-filter: blur(8px); //TODO:Averiguar acerca de esta propiedad [backdrop-filter]
-        transition: top .4s; //TODO:Averiguar acerca de esta propiedad [Transition]
+        backdrop-filter: blur(
+            8px
+        ); //TODO:Averiguar acerca de esta propiedad [backdrop-filter]
+        transition: top 0.4s; //TODO:Averiguar acerca de esta propiedad [Transition]
     }
 }
 
 .nav__title,
 .nav__name,
-.nav__close{
+.nav__close {
     color: v.$white-color;
 }
 
-.nav__title{
+.nav__title {
     display: block;
     font-size: v.$smaller-font-size;
     font-weight: v.$font-semi-bold;
     margin-bottom: 3.5rem;
 }
 
-.nav__name{
+.nav__name {
     position: relative;
     width: max-content; //TODO:Averiguar acerca de esta propiedad [max-content]
     margin: 0 auto 3rem;
@@ -80,7 +82,7 @@
 }
 
 .nav__name::before,
-.nav__name::after{
+.nav__name::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -90,46 +92,45 @@
     background-color: v.$text-color-light;
 }
 
-.nav__name::before{
+.nav__name::before {
     left: initial;
     right: -4rem;
 }
 
-
-.nav__list{
+.nav__list {
     display: flex;
     flex-direction: column;
     row-gap: 2.5rem;
 }
 
-.nav__link{
+.nav__link {
     position: relative;
     color: v.$text-color-light;
     font-size: v.$h3-font-size;
     font-weight: v.$font-bold;
-    transition: color .3s;
+    transition: color 0.3s;
 }
 
-.nav__link::after{
+.nav__link::after {
     content: '';
     width: 0;
     height: 2px;
     background-color: v.$white-color;
     position: absolute;
     left: 0;
-    bottom: -.5rem;
-    transition: width .3s;
+    bottom: -0.5rem;
+    transition: width 0.3s;
 }
 
-.nav__link:hover{
+.nav__link:hover {
     color: v.$white-color;
 }
 
-.nav__link:hover::after{
+.nav__link:hover::after {
     width: 25%;
 }
 
-.nav__close{
+.nav__close {
     position: absolute;
     font-size: 1.5rem;
     top: 1rem;
@@ -138,6 +139,6 @@
 }
 
 // Show menu
-.show-menu{
+.show-menu {
     top: 0;
 }

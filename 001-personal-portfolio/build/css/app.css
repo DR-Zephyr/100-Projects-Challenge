@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap");
+/*================ Variables ====================*/
 /*========== Colors ==========*/
 /*Color mode HSL(hue, saturation, lightness)*/
 /*========== Font and typography ==========*/
@@ -6,246 +7,386 @@
 /*========== Font weight ==========*/
 /*========== z index ==========*/
 /*========== Responsive typography ==========*/
+/*================ Global Styles ====================*/
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-size: 0.938rem;
-    background-color: hsl(0, 0%, 87%);
-    color: hsl(0, 0%, 35%);
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 0.938rem;
+  background-color: hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 35%);
 }
 
 h1,
 h2,
 h3,
 h4 {
-    color: hsl(0, 0%, 0%);
-    font-weight: 700;
+  color: hsl(0, 0%, 0%);
+  font-weight: 700;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
+/*================ Reusable Styles ====================*/
 .container {
-    max-width: 1120px;
-    margin-inline: 1.5rem;
+  max-width: 1120px;
+  margin-inline: 1.5rem;
 }
 
 .grid {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .section {
-    padding-block: 4rem 2rem;
+  padding-block: 4rem 2rem;
 }
 
 .section__title-1,
 .section__title-2 {
-    position: relative;
-    font-size: 1.75rem;
-    width: max-content;
-    margin: 0.75rem auto 2rem;
+  position: relative;
+  font-size: 1.75rem;
+  width: max-content;
+  margin: 0.75rem auto 2rem;
 }
 
 .section__title-1 span,
 .section__title-2 span {
-    z-index: 5;
-    position: relative;
+  z-index: 5;
+  position: relative;
 }
 
 .section__title-1::after,
 .section__title-2::after {
-    content: '';
-    width: 40px;
-    height: 28px;
-    background-color: hsla(14, 98%, 50%, 0.2);
-    position: absolute;
-    top: -4px;
-    right: -8px;
+  content: "";
+  width: 40px;
+  height: 28px;
+  background-color: hsla(14, 98%, 50%, 0.2);
+  position: absolute;
+  top: -4px;
+  right: -8px;
 }
 
 .section__title-2::after {
-    top: initial;
-    bottom: -4px;
+  top: initial;
+  bottom: -4px;
 }
 
 .geometric-box {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: hsl(14, 98%, 50%);
-    rotate: -30deg;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: hsl(14, 98%, 50%);
+  rotate: -30deg;
 }
 
 .geometric-box::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border: 3px solid hsl(0, 0%, 0%);
-    left: -5px;
-    top: -5px;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 3px solid hsl(0, 0%, 0%);
+  left: -5px;
+  top: -5px;
 }
 
 .main {
-    overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden; /* For animation ScrollReveal */
 }
 
+/*================ Header, Nav Styles ====================*/
 .header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: hsl(0, 0%, 87%);
-    z-index: 100;
-    transition: box-shadow 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: hsl(0, 0%, 87%);
+  z-index: 100;
+  transition: box-shadow 0.4s;
 }
 
 .nav {
-    position: relative;
-    height: 3.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: relative;
+  height: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__logo {
-    display: flex;
-    column-gap: 0.5rem;
-    align-items: center;
-    font-weight: 600;
-    color: hsl(0, 0%, 0%);
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
 }
 
 .nav__logo-circle,
 .nav__toggle {
-    width: 32px;
-    height: 32px;
-    background-color: black;
-    color: hsl(0, 0%, 95%);
-    display: grid;
-    place-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: black;
+  color: hsl(0, 0%, 95%);
+  display: grid;
+  place-items: center;
 }
 
 .nav__logo-circle {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .nav__toggle {
-    font-size: 1.25rem;
-    cursor: pointer;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1150px) {
-    .nav__menu {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        padding-block: 1.8rem 5rem;
-        background-color: hsla(0, 0%, 0%, 0.75);
-        width: 100%;
-        text-align: center;
-        backdrop-filter: blur(8px);
-        transition: top 0.4s;
-    }
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    padding-block: 1.8rem 5rem;
+    background-color: hsla(0, 0%, 0%, 0.75);
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    transition: top 0.4s;
+  }
 }
 .nav__title,
 .nav__name,
 .nav__close {
-    color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
 }
 
 .nav__title {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-bottom: 3.5rem;
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
 }
 
 .nav__name {
-    position: relative;
-    width: max-content;
-    margin: 0 auto 3rem;
-    font-size: 1.25rem;
+  position: relative;
+  width: max-content;
+  margin: 0 auto 3rem;
+  font-size: 1.25rem;
 }
 
 .nav__name::before,
 .nav__name::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -4rem;
-    width: 40px;
-    height: 1px;
-    background-color: hsl(0, 0%, 64%);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -4rem;
+  width: 40px;
+  height: 1px;
+  background-color: hsl(0, 0%, 64%);
 }
 
 .nav__name::before {
-    left: initial;
-    right: -4rem;
+  left: initial;
+  right: -4rem;
 }
 
 .nav__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
 }
 
 .nav__link {
-    position: relative;
-    color: hsl(0, 0%, 64%);
-    font-size: 1.125rem;
-    font-weight: 700;
-    transition: color 0.3s;
+  position: relative;
+  color: hsl(0, 0%, 64%);
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: color 0.3s;
 }
 
 .nav__link::after {
-    content: '';
-    width: 0;
-    height: 2px;
-    background-color: hsl(0, 0%, 95%);
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem;
-    transition: width 0.3s;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: hsl(0, 0%, 95%);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  transition: width 0.3s;
 }
 
 .nav__link:hover {
-    color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
 }
 
 .nav__link:hover::after {
-    width: 25%;
+  width: 25%;
 }
 
 .nav__close {
-    position: absolute;
-    font-size: 1.5rem;
-    top: 1rem;
-    right: 1.5rem;
-    cursor: pointer;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
 }
 
 .show-menu {
-    top: 0;
+  top: 0;
+}
+
+/*================ Home Styles ====================*/
+.home__container {
+  padding-top: 2rem;
+}
+
+.home__name {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.home__perfil {
+  position: relative;
+  justify-self: center;
+}
+
+.home__image {
+  width: 220px;
+}
+
+.home__img {
+  position: relative;
+  z-index: 10;
+}
+
+.home__shadow {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 80%);
+  position: absolute;
+  top: 0;
+  right: -0.75rem;
+  border: 4px solid hsl(0, 0%, 0%);
+  z-index: 5;
+}
+
+.home__arrow,
+.home__lines {
+  position: absolute;
+  filter: invert(1);
+  width: 50px;
+  transition: filter 0.4s;
+}
+
+.home__arrow {
+  left: 40%;
+  bottom: -3.5rem;
+}
+
+.home__lines {
+  right: -2rem;
+  bottom: 1rem;
+}
+
+.home__perfil .geometric-box {
+  top: 2.5rem;
+  left: -0.7rem;
+  z-index: 10;
+}
+
+.home__social {
+  position: absolute;
+  height: 100px;
+  left: -4rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  row-gap: 1rem;
+  display: grid;
+}
+
+.home__social-link {
+  background-color: hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 95%);
+  font-size: 1.25rem;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.3s;
+}
+
+.home__social-link:hover {
+  background-color: hsl(0, 0%, 0%);
+}
+
+.home__info {
+  margin-top: 4rem;
+}
+
+.home__description {
+  color: hsl(0, 0%, 0%);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.home__description b {
+  background-image: linear-gradient(90deg, hsla(14, 98%, 50%, 0.3), hsla(14, 98%, 50%, 0));
+}
+
+.home__scroll {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.home__scroll-box {
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 95%);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.home__scroll-box i {
+  animation: scroll-down 3s infinite;
+}
+.home__scroll-box .home__scroll-text {
+  display: none;
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
 }
