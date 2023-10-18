@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
         integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="./build/css/app.css" />
     <title>Emmanuel - DR_Zephyr Website Portfolio</title>
@@ -31,19 +35,19 @@
 
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link">Home</a>
+                        <a href="#home" class="nav__link">Inicio</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">About me</a>
+                        <a href="#about" class="nav__link">Sobre Mi</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#projects" class="nav__link">Projects</a>
+                        <a href="#projects" class="nav__link">Proyectos</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact me</a>
+                        <a href="#contact" class="nav__link">Contacto</a>
                     </li>
                 </ul>
 
@@ -127,7 +131,7 @@
         <section class="section" id="section">
             <div class="about__container container grid">
                 <h2 class="section__title-1">
-                    Sobre Mi.
+                    <span>Sobre Mi.</span>
                 </h2>
 
                 <div class="about__perfil">
@@ -144,15 +148,15 @@
 
                 <div class="about__info">
                     <p class="about__description">
-                        Me apasiona la <b>creación de páginas y aplicaciones web</b>, especialmente en el diseño de
-                        <b>interfaces de usuario (UI/UX)</b>. Mi experiencia, adquirida a través de proyectos
+                        Me apasiona la <b>Creación de Páginas y Aplicaciones Web</b>. Mi experiencia, adquirida a través
+                        de proyectos
                         personales, me ha permitido perfeccionar mis habilidades en este campo. Estoy entusiasmado por
                         poner todo mi conocimiento y creatividad al servicio de tus proyectos.
                     </p>
 
                     <ul class="about__list">
                         <li class="about__item">
-                            <b>My Skills Are: </b>HTML, CSS, JavaScript, SASS/SCSS, Gulp, Jest, TypeScript, Node.js,
+                            <b>Mis habilidades: </b>HTML, CSS, JavaScript, SASS/SCSS, Gulp, Jest, TypeScript, Node.js,
                             React, Angular, MongoDB, Git & Git Hub, SQL, Bootstrap, Tailwind CSS.
                         </li>
                     </ul>
@@ -160,7 +164,7 @@
                     <div class="about__buttons">
                         <a href="" class="button">
                             <i class="ri-send-plane-line"></i>
-                            <i>Contact Me</i>
+                            <i>Enviar "Klk, Bro"</i>
                         </a>
 
                         <a href="https://www.linkedin.com/in/emmanuelcb/" target="_blank" class="button__ghost">
@@ -168,6 +172,70 @@
                         </a>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!--==================== Services====================-->
+        <section class="services section">
+            <h2 class="section__title-2">
+                <span>Servicios</span>
+            </h2>
+
+            <div class="services__container container grid">
+                <article class="services__card">
+                    <div class="services__border"></div>
+
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <div class="services__box"></div>
+                            <i class="ri-code-box-line"></i>
+                        </div>
+
+                        <h2 class="services__title">Desarrollo Web</h2>
+
+                        <p class="services__description">
+                            Creación de soluciones web personalizadas, diseñadas para satisfacer tus especificaciones
+                            exactas y ofrecer una experiencia de usuario impecable.
+                        </p>
+                    </div>
+
+                </article>
+
+                <article class="services__card">
+                    <div class="services__border"></div>
+
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <div class="services__box"></div>
+                            <i class="ri-database-2-line"></i>
+                        </div>
+
+                        <h2 class="services__title">Integración de Bases de Datos:</h2>
+
+                        <p class="services__description">
+                            Conexión de aplicaciones web con bases de datos, ya sea SQL o NoSQL, como MongoDB, para
+                            gestionar datos de manera eficiente.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__border"></div>
+
+                    <div class="services__content">
+                        <div class="services__icon">
+                            <!-- <div class="services__box"></div> -->
+                            <i class="fa-brands fa-gulp"></i>
+                        </div>
+
+                        <h2 class="services__title">Automatización de Tareas con Gulp</h2>
+
+                        <p class="services__description">
+                            Automatización de tareas de desarrollo, como la compilación de estilos, la minificación y la
+                            concatenación de archivos, para un flujo de trabajo más eficiente.
+                        </p>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
