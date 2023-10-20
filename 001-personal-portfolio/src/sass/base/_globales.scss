@@ -33,8 +33,11 @@ ul {
 
 a {
     text-decoration: none;
-}
 
+    &:visited, &:link{
+        color: v.$text-color;
+    }
+}
 img {
     display: block;
     max-width: 100%;
