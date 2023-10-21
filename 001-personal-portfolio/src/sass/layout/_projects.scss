@@ -92,4 +92,12 @@
         width: 100%;
         height: 1px;
     }
+
+    &:visited{
+        color: v.$text-color;
+    }
+
+    &:link{
+        color: v.$text-color;
+    }
 }

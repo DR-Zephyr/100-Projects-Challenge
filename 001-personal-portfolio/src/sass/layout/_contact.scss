@@ -150,7 +150,7 @@
     row-gap: 1rem;
     background-color: hsl(0, 0, 10);
     text-align: center;
-    padding-bottom: 1rem;
+    padding-bottom: 5rem;
 
     &-arrow{
         width: 32px;
@@ -183,16 +183,22 @@
 
     &-link{
         background-color: v.$black-color-light;
-        padding: 6px;
+        padding: 8px;
         color: v.$white-color;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         display: grid;
         place-items: center;
         transition: background-color .4s;
+        border-radius: 10px;  
 
         &:hover{
             background-color: v.$first-color;
         }
     }
+}
+
+.contact__message{
+    text-align: center;
+    color: v.$white-color;
 }
 

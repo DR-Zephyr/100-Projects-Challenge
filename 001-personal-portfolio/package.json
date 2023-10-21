@@ -11,6 +11,7 @@
     "watch": "gulp watcher"
   },
   "devDependencies": {
+    "@emailjs/browser": "^3.11.0",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",

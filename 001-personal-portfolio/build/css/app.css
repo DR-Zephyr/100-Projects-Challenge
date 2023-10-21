@@ -41,9 +41,6 @@ ul {
 a {
   text-decoration: none;
 }
-a:link {
-  color: hsl(0, 0%, 35%);
-}
 
 img {
   display: block;
@@ -673,6 +670,12 @@ img {
   width: 100%;
   height: 1px;
 }
+.projects__link:visited {
+  color: hsl(0, 0%, 35%);
+}
+.projects__link:link {
+  color: hsl(0, 0%, 35%);
+}
 
 .contact {
   padding-bottom: 0;
@@ -813,7 +816,7 @@ img {
   row-gap: 1rem;
   background-color: hsl(0, 0%, 10%);
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 5rem;
 }
 .contact__social-arrow {
   width: 32px;
@@ -841,13 +844,19 @@ img {
 }
 .contact__social-link {
   background-color: hsl(0, 0%, 40%);
-  padding: 6px;
+  padding: 8px;
   color: hsl(0, 0%, 95%);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   display: grid;
   place-items: center;
   transition: background-color 0.4s;
+  border-radius: 10px;
 }
 .contact__social-link:hover {
   background-color: hsl(14, 98%, 50%);
+}
+
+.contact__message {
+  text-align: center;
+  color: hsl(0, 0%, 95%);
 }

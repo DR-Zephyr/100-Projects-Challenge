@@ -398,8 +398,7 @@
                     </p>
 
                     <p class="contact__description-2">
-                        Necesitaré tu <b>Nombre</b> y <b>Direccion de Correo Electronico</b>, pero tranquilo, no
-                        recibires nada mas aparte de las respuesta de tu correo.
+                        Necesitaré tu <b>Nombre</b> y <b>Direccion de Correo Electronico</b>, pero tranquilo, no usaré tu correo para enviarte promociones o spam. 
                     </p>
 
                     <div class="geometric-box"></div>
@@ -435,6 +434,9 @@
                                     placeholder="Escribe aqui tu mensaje"></textarea>
                                 <label for="message" class="contact__label">Mensaje</label>
                             </div>
+
+                            <p id="contact-message" class="contact__message"></p>
+
                         </div>
 
                         <button class="contact__button button">
@@ -477,8 +479,11 @@
             </div>
         </section>
     </main>
-
+    <!--==================== EmailJS ====================-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
     <script src="./js/main.js"></script>
+    <script src="./js/email.js"></script>
 </body>
 
 </html>
