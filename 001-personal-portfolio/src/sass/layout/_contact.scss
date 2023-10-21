@@ -1,0 +1,198 @@
+@use '../base/variables' as v;
+
+.contact {
+    padding-bottom: 0;
+}
+
+.contact__container {
+    position: relative;
+    grid-template-rows: 300px max-content max-content;
+    row-gap: 0;
+}
+
+.contact__data {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: v.$container-color;
+    padding: 3rem 1.5rem 3.5rem;
+    margin-left: auto;
+    border-bottom: 4px solid v.$first-color;
+    z-index: 5;
+    transition: background-color 0.4s;
+
+    .section__title-2 {
+        margin: 0 0 1.5rem;
+        transform: translateX(-3rem);
+    }
+
+    .geometric-box {
+        top: 2rem;
+        right: 2.5rem;
+    }
+}
+
+.contact__description-1 {
+    color: v.$title-color;
+    font-weight: v.$font-medium;
+    margin-bottom: 2rem;
+}
+
+.contact__description-2 {
+    color: v.$title-color;
+    font-weight: v.$small-font-size;
+}
+
+.contact__mail {
+    position: relative;
+    background-color: v.$black-color;
+    padding: 5rem 1.5rem 2.5rem;
+    margin-top: -2.5rem;
+    transition: background-color 0.4s;
+}
+
+.contact__title {
+    color: v.$white-color;
+    font-size: v.$h2-font-size;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact__form,
+.contact_group {
+    position: relative;
+    display: grid;
+    row-gap: 1.25rem;
+}
+
+.contact__form {
+    .contact__area {
+        height: 10rem;
+    }
+}
+
+.contact__box {
+    position: relative;
+    width: 100%;
+    height: 58px;
+}
+
+.contact__input,
+.contact__button {
+    font-family: v.$body-font;
+    font-size: v.$normal-font-size;
+    outline: none;
+    border: none;
+}
+
+.contact__input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: v.$black-color;
+    border: 3px solid v.$black-color-light;
+    color: v.$white-color;
+    padding: 0.5rem 1rem;
+    font-weight: v.$font-medium;
+    transition: border 0.4s, background-color 0.4s;
+
+    &::placeholder {
+        color: v.$text-color-light;
+        transition: opacity 0.4s;
+    }
+
+    &:focus {
+        border: 3px solid v.$white-color;
+    }
+
+    &:-webkit-autofill {
+        transition: background-color 6000s, color 6000s;
+    }
+    
+    &:focus::placeholder{
+        opacity: 0;
+    }
+
+    &:focus + .contact__label{
+        opacity: 1;
+        top: -16px;
+    }
+}
+
+.contact__label {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    color: v.$text-color-light;
+    font-size: v.$small-font-size;
+    font-weight: v.$font-medium;
+    background-color: v.$black-color;
+    padding: 8px;
+    pointer-events: none;
+    transition: top 0.4s, opacity 0.4s, background-color 0.4s;
+    opacity: 0;
+}
+
+.contact__area {
+    textarea {
+        resize: none;
+        padding-top: 1rem;
+    }
+}
+
+.contact__button {
+    background-color: v.$first-color;
+    cursor: pointer;
+}
+
+.contact__social{
+    display: grid;
+    row-gap: 1rem;
+    background-color: hsl(0, 0, 10);
+    text-align: center;
+    padding-bottom: 1rem;
+
+    &-arrow{
+        width: 32px;
+        margin: 0 auto;
+    }
+
+    &-data{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    &-description-1{
+        color: v.$text-color-light;
+        font-size: v.$small-font-size;
+        margin-bottom: .5rem;
+    }
+
+    &-description-2{
+        color: v.$white-color;
+        font-size: v.$small-font-size;
+        font-weight: v.$font-semi-bold;
+    }
+
+    &-links{
+        display: flex;
+        justify-content: center;
+        column-gap: .75rem;
+    }
+
+    &-link{
+        background-color: v.$black-color-light;
+        padding: 6px;
+        color: v.$white-color;
+        font-size: 1.25rem;
+        display: grid;
+        place-items: center;
+        transition: background-color .4s;
+
+        &:hover{
+            background-color: v.$first-color;
+        }
+    }
+}
+
