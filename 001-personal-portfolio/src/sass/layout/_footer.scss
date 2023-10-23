@@ -1,0 +1,74 @@
+@use '../base/variables' as v;
+
+.footer {
+    background-color: v.$black-color;
+}
+
+.footer__container {
+    padding-block: 3rem 2rem;
+    row-gap: 2.5rem;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+
+.footer__link {
+    color: v.$white-color;
+    transition: color 0.4s;
+
+    &:hover {
+        color: v.$text-color-light;
+    }
+}
+
+.footer__copy {
+    color: v.$text-color-light;
+    font-size: v.$small-font-size;
+    text-align: center;
+    display: block;
+    padding-bottom: 3rem;
+
+    a {
+        color: v.$white-color;
+        font-weight: v.$font-medium;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: hsl(0, 0, 65);
+
+    &-thumb {
+        border-radius: 0.5rem;
+        background-color: hsl(0, 0, 55);
+
+        &:hover {
+            background-color: hsl(0, 0, 45);
+        }
+    }
+}
+
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    background-color: v.$black-color;
+    display: inline-flex;
+    padding: 8px;
+    font-size: 1.25rem;
+    color: v.$white-color;
+    z-index: v.$z-tooltip;
+    transition: bottom 0.4s, transform 0.4s, background-color 0.4s;
+
+    &:hover{
+        transform: translateY(-.5rem);
+    }
+}
+
+.show-scroll{
+    bottom: 3rem;
+}
