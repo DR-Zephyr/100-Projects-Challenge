@@ -259,6 +259,13 @@ img {
   top: 0;
 }
 
+.active-link {
+  color: hsl(0, 0%, 95%);
+}
+.active-link::after {
+  width: 25%;
+}
+
 /*================ Home Styles ====================*/
 .home__container {
   padding-top: 2rem;

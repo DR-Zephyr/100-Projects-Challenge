@@ -48,3 +48,32 @@ const showScroll = () => {
 };
 
 window.addEventListener('scroll', showScroll);
+
+/*=============== Scroll Sections Active Link ===============*/
+const sections = document.querySelectorAll('.section[id]');
+
+const scrollActive = () => {
+    const scrollDown = window.scrollY;
+
+    console.log('/////////////////////////////////////')
+    sections.forEach((current) => {
+        console.log(`${current.getAttribute('id')}: offsetTop: ${current.offsetTop - 58}, offsetHeight: ${current.offsetHeight}, scrollDown: ${scrollDown}`)
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop - 58,
+            sectionId = current.getAttribute('id'),
+            sectionClass = document.querySelector(
+                '.nav__menu a[href*=' + sectionId + ']'
+            );
+
+        if (
+            scrollDown > sectionTop &&
+            scrollDown <= sectionTop + sectionHeight
+        ) {
+            sectionClass.classList.add('active-link');
+        } else {
+            sectionClass.classList.remove('active-link');
+        }
+    });
+};
+
+window.addEventListener('scroll', scrollActive);
